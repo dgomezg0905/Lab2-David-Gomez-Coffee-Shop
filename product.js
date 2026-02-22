@@ -14,15 +14,14 @@ async function fetchCoffees() {
         // STEP 1: Fetch data from the API
         // API URL: 'https://api.sampleapis.com/coffee/hot'
         // HINT: const response = await fetch('URL_HERE');
-        const response = await fetch('https://api.sampleapis.com/coffee/hot'); // YOUR CODE HERE
-        
+        const response = await fetch('https://api.sampleapis.com/coffee/hot');
         
         // STEP 2: Convert response to JSON
         // HINT: const data = await response.json();
-        const data = await response.json(); // YOUR CODE HERE
+        const data = await response.json();
         console.log('API data:', data);
+        console.log('Data type:', typeof data, Array.isArray(data));
 
-       
         // ==========================================
         // TODO #2: TRANSFORM THE DATA
         // ==========================================
