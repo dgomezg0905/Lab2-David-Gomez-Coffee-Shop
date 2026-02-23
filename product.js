@@ -14,7 +14,7 @@ async function fetchCoffees() {
         // STEP 1: Fetch data from the API
         // API URL: 'https://api.sampleapis.com/coffee/hot'
         // HINT: const response = await fetch('URL_HERE');
-        const response = await fetch('https://api.sampleapis.com/coffee/hot');
+        const response = await fetch('coffee.json'); // Using local JSON file for testing
         
         // STEP 2: Convert response to JSON
         // HINT: const data = await response.json();
@@ -34,7 +34,7 @@ async function fetchCoffees() {
         // Use .map() to transform each coffee object:
         // HINT: allCoffees = data.map(coffee => ({ ... }));
         
-        allCoffees = data.map(coffee => ({
+        allCoffees = data.hot.map(coffee => ({
             id: coffee.id,
             name: coffee.title, // YOUR CODE HERE (use coffee.title)
             description: coffee.description, // YOUR CODE HERE
